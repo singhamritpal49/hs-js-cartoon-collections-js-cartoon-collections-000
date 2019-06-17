@@ -1,7 +1,7 @@
-var dwarves = ["Doc", "Dopey", "Bashful", "Grumpy"];
+var dwarves = ["Doc", "Dopey", "Bashful", "Grumpy"]; //
 function dwarfRollCall(dwarves) {
  var newArray =[];
-  for (var i = 0; i < dwarves.length; i++) {
+  for (var i = dwarves.length /2; i < dwarves.length ; i++) {
      newArray.push(`${i+1}. ${dwarves[i]} `);
       //newArray.push( i+1 + ". " + dwarves[i] )
   }
@@ -26,7 +26,7 @@ function summonCaptainPlanet(planeteerCalls){   //
         return true;
       }
     }
-    return false
+    return false //If the function reaches here that means the loop ended and we can simply return false
   }
 /* __________________________________________________________________________*/
 
@@ -35,9 +35,34 @@ var soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"];
 var ingredients = ["garlic", "rosemary", "bread"];
 function findTheCheese (foods) {
   for (var i = 0; i < foods.length; i++) {
-    if (foods[i] ===  'gouda'|| foods[i]===  'cheddar' || foods[i]==='camembert') {
+    if (foods[i] ===  'gouda'|| foods[i]===  'cheddar' || foods[i]==='camembert' || food[i] ==='swis') {
       return foods[i];
     }
   }
   return 'no cheese!'
 }
+
+
+
+
+
+
+
+
+var words = ['banana', 'cherry', 'milk'];
+function wordsThatStartWithB(words){
+  var newArray = [];
+  for(var i = 0; i < words.length; i++) {
+    if(words[i].startsWith('b')) {
+      newArray.push(words[i])
+    }
+  }
+  return newArray
+}
+
+"eric".startWith("b") // false
+"brian".startWith("b") // true
+
+wordsThatStartWithB(['banana', 'cherry', 'milk']) // ['banana']
+wordsThatStartWithB(['brian', 'bob', 'james']) // ['brian', 'bob']
+wordsThatStartWithB(['charlie', 'prince', 'eric']) // []
